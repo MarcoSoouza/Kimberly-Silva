@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a001a, #330033);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  overflow-x: hidden;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.header-title {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #c099ff;
+  letter-spacing: 1.4px;
+  text-shadow: 0 0 10px #ac7cff;
+  margin-bottom: 10px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.sub-header {
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: #d1b9ff;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 5px #ac7cff;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-info {
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 25px;
+  box-shadow: 0 15px 50px rgba(120, 70, 180, 0.75);
+  padding: 50px 60px;
+  min-width: 320px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: saturate(180%) blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.contact-info h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #d1aaff;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #9a4edd;
+  padding-bottom: 8px;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.info-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-weight: 300;
+  font-size: 1.15rem;
+  color: #e5dbff;
+  justify-content: center;
+}
+
+.info-column {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 1.7s ease forwards;
+}
+
+.info-item.icon-only {
+  display: inline-flex;
+  margin-right: 15px;
+}
+
+.info-item.icon-only a svg {
+  width: 48px;
+  height: 48px;
+  transition: fill 0.3s ease, transform 0.3s ease;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.info-item.icon-only a:hover svg {
+  fill: #ce9ffe;
+  filter: drop-shadow(0 0 5px #ce9ffe);
+  transform: scale(1.2);
+}
+
+.info-item a {
+  color: #cbb1ff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.info-item a:hover {
+  color: #cbb1ff;
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #b398c6;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ac7cff;
+  }
+  to {
+    text-shadow: 0 0 20px #f4acff, 0 0 30px #ac7cff;
+  }
+}
+
+/* Button styles for navigation */
+.buttons-container {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4b0082;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    margin: 0 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(75, 0, 130, 0.4);
+    user-select: none;
+}
+
+.btn:hover {
+    background-color: #7a3db8;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(122, 61, 184, 0.7);
+}

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a001a, #330033);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 20px;
+    overflow-x: hidden;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header-title {
+    font-weight: 600;
+    font-size: 2.5rem;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.about-me {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.about-me h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about-me p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.buttons-container {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4b0082;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    margin: 0 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(75, 0, 130, 0.4);
+    user-select: none;
+}
+
+.btn:hover {
+    background-color: #7a3db8;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(122, 61, 184, 0.7);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    font-weight: 300;
+    font-size: 1rem;
+    opacity: 0.8;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Animations */
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.header-title.animate-slide-in {
+    animation-name: slideInFromLeft;
+}
+
+.about-me.animate-fade-in {
+    animation-name: fadeIn;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.footer.animate-slide-in-delay {
+    animation-name: slideInFromLeft;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
